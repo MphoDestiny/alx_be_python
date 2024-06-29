@@ -6,15 +6,13 @@ priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time bound? (yes/no): ").lower()
 
 # Process the task based on priority and time sensitivity
-match priority:
-    case 'high':
-        reminder = f" '{task}' is a high priority task"
-    case 'medium':
-        reminder = f" '{task}' is a medium priority task"
-    case 'low':
-        reminder = f" '{task}' is a low priority task"
-    case_:
-        reminder = f" '{task}' has an unknown priority level"
+if priority == 'high':
+    reminder = f" '{task}' is a high priority task"
+elif priority == 'medium':
+    reminder = f" '{task}' is a medium priority task"
+elif priority == 'low':
+    reminder = f" '{task}' is a low priority task"
+else: reminder = f" '{task}' has an unknown priority level"
 
 # Modify the reminder if the task is time-bound
 if time_bound == 'yes':
